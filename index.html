@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+    <div id="balance" class="balance">
+        balance:$0
+    </div>
+    <div  class="summary">
+         <div id="money-plus" class="income">
+            Income: $0
+         </div>
+         <div id="money-minus" class="expenses">
+            Expenses: $0
+         </div>
+    </div>
+    <form id="form">
+  <input type="text" id="text" placeholder="Enter description" required />
+  <input type="number" id="amount" placeholder="Enter amount" required />
+  
+  <select id="category" required>
+    <option value="" disabled selected>Select category</option>
+    <option value="Food">🍔 Food</option>
+    <option value="Transport">🚗 Transport</option>
+    <option value="Utilities">💡 Utilities</option>
+    <option value="Entertainment">🎮 Entertainment</option>
+    <option value="Other">📦 Other</option>
+  </select>
+
+  <button id="button" type="submit">Add Transaction</button>
+</form>
+
+    <ul id="transactions" class="transactions"></ul>
+<h3>Income by Category</h3>
+<canvas id="categoryChart" width="400" height="400"></canvas>
+
+<p id="empty-message" class="no-transactions">No transactions to show</p>
+
+
+
+    </div>
+    
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
